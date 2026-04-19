@@ -1,7 +1,7 @@
 try:
-    note = input("Enter a short note/message: ")
+    message = input("Enter a short note/message: ")
     with open("notes.txt", "w") as file:
-        file.write(note)
+        file.write(message)
 
     with open("notes.txt", "r") as file:
         print("\nFile content:")
@@ -17,5 +17,3 @@ try:
 
 except FileNotFoundError:
     print("Error: File not found.")
-except Exception as e:
-    print("An unexpected error occurred:", e)
